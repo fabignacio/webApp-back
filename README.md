@@ -210,9 +210,14 @@ Deberá crear una base de datos llamada documentosNazar. Seguido de eso, deberá e
 		END
 	END
 
+# Pruebas
+
+Antes de probar usando el front end, le recomiendo que haga pruebas usando alguna herramienta como postman con el archivo pruebas.json que encontrará en este mismo proyecto.
+Esto es solo para comprobar el correcto funcionamiento del servidor.
+
 # Agradecimientos
 
-Muchas gracias por darme la oportunidad de realizar esta prueba técnica. Si tienen alguna duda, favor contactarme: 
+Muchas gracias por darme la oportunidad de realizar esta prueba técnica. Si tienen alguna duda, favor contactarme:
 
 	Correo: fa.alarconm@duocuc.cl
 	Telefono: +56 9 4290 8148
