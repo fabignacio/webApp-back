@@ -212,7 +212,7 @@ Deberá crear una base de datos llamada documentosNazar. Seguido de eso, deberá e
 
 # Pruebas
 
-Antes de probar usando el front end, le recomiendo que haga pruebas usando alguna herramienta como postman con el archivo pruebas.json que encontrará en el correo donde se hace envio del proyecto o en este mismo archivo Readme.
+Antes de probar usando el front end, le recomiendo que haga pruebas usando alguna herramienta como postman con el archivo pruebas.json que aquí aparece.
 Esto es solo para comprobar el correcto funcionamiento del servidor.
 
 	
