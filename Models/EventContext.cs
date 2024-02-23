@@ -88,7 +88,7 @@ namespace apiDocument.Models
             Color colorTexto = ColorConstants.WHITE; 
 
             //Imagen Camión
-            string camionPath = "./imagenes/TransportesNazar.jpeg";
+            string camionPath = "./imagenes/BannerNazar.jpg";
             ImageData camionData = ImageDataFactory.Create(camionPath);
             Image cam = new Image(camionData);
 
@@ -165,7 +165,7 @@ namespace apiDocument.Models
                         List listPersonal = new List()
                                .SetSymbolIndent(12)
                                .SetListSymbol("\u2022")
-                               .SetFontSize(16);
+                               .SetFontSize(14);
                         listPersonal.Add(new ListItem($"Nombre: {document.Nombre}"))
                             .SetBold()
                             .SetFont(PdfFontFactory.CreateFont(StandardFonts.TIMES_ROMAN));
@@ -183,17 +183,18 @@ namespace apiDocument.Models
                         List listAntecedentes = new List()
                                .SetSymbolIndent(16)
                                .SetListSymbol("\u2022")
-                               .SetFontSize(12);
+                               .SetFontSize(14);
                         listAntecedentes.Add(new ListItem($"Operación: {document.Operacion} "))
                             .SetBold()
                             .SetFont(PdfFontFactory.CreateFont(StandardFonts.TIMES_ROMAN));
-                        listAntecedentes.Add(new ListItem($"Fecha: {document.FechaAntecedente.ToString("dddd-MM-yyyy")} "))
+                        listAntecedentes.Add(new ListItem($"Fecha: {document.FechaAntecedente.ToString("dd-MM-yyyy")} "))
                             .SetBold()
                             .SetFont(PdfFontFactory.CreateFont(StandardFonts.TIMES_ROMAN));
                         listAntecedentes.Add(new ListItem($"Ubicación: {document.Ubicacion}"))
                             .SetBold()
                             .SetFont(PdfFontFactory.CreateFont(StandardFonts.TIMES_ROMAN));
-                        listAntecedentes.Add(new ListItem($"Hora Informada: {document.HoraInformada} "))
+
+                        listAntecedentes.Add(new ListItem($"Hora Informada: {document.HoraInformada!.Value.ToString(@"hh\:mm")}"))
                             .SetBold()
                             .SetFont(PdfFontFactory.CreateFont(StandardFonts.TIMES_ROMAN));
 
@@ -267,6 +268,7 @@ namespace apiDocument.Models
 
                         Cell cellDataRegistro = new Cell()
                             .Add(registro)
+                            .SetPaddingLeft(20)
                             .SetBackgroundColor(colorTexto);
                         Cell cellDataAcciones = new Cell().Add(new Paragraph(document.AccionesInmediatas)).SetBackgroundColor(colorTexto);
 
